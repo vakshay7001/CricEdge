@@ -18,7 +18,7 @@ public:
 signals:
     void homeRequested();
 
-    // optional: void playerSelected(...) etc.
+  
 
 public slots:
     void loadPlayers();
@@ -30,4 +30,4 @@ private:
     Ui::PlayerListPage *ui;
 };
 
-#endif // PLAYERLISTPAGE_H
+#endif 
