@@ -16,31 +16,28 @@ MainWindow::MainWindow(QWidget *parent)
     playerListPage = new PlayerListPage(this);
     liveScoresPage = new LiveScoresPage(this);
 
-    stackedWidget->addWidget(homePage);         // index 0
-    stackedWidget->addWidget(addPlayerPage);    // index 1
-    stackedWidget->addWidget(playerListPage);   // index 2 ✅ NEW
+    stackedWidget->addWidget(homePage);         
+    stackedWidget->addWidget(addPlayerPage);    
+    stackedWidget->addWidget(playerListPage);   
     stackedWidget->addWidget(liveScoresPage);
 
     stackedWidget->setCurrentWidget(homePage);
 
     connect(homePage, &HomePage::addPlayerClicked,
-            this, &MainWindow::showAddPlayerPage);
-
-    connect(homePage, &HomePage::playerListClicked,  // ✅ NEW
-            this, &MainWindow::showPlayerListPage);
-
+     this, &MainWindow::showAddPlayerPage);
+    connect(homePage, &HomePage::playerListClicked,
+    this, &MainWindow::showPlayerListPage);
     connect(homePage, &HomePage::liveScoresClicked,
-            this, &MainWindow::showLiveScoresPage);
+    this, &MainWindow::showLiveScoresPage);
 
 
     connect(addPlayerPage, &AddPlayerPage::homeRequested,
-            this, &MainWindow::showHomePage);
-
-    connect(playerListPage, &PlayerListPage::homeRequested,  // ✅ NEW
-            this, &MainWindow::showHomePage);
+      this, &MainWindow::showHomePage);
+     connect(playerListPage, &PlayerListPage::homeRequested, 
+    this, &MainWindow::showHomePage);
 
     connect(liveScoresPage, &LiveScoresPage::homeRequested,
-            this, &MainWindow::showHomePage);
+    this, &MainWindow::showHomePage);
 }
 
 MainWindow::~MainWindow()
@@ -53,9 +50,9 @@ void MainWindow::showAddPlayerPage()
     stackedWidget->setCurrentWidget(addPlayerPage);
 }
 
-void MainWindow::showPlayerListPage()  // ✅ NEW
+void MainWindow::showPlayerListPage()  
 {
-    playerListPage->loadPlayers();  // always reload fresh data
+    playerListPage->loadPlayers(); 
     stackedWidget->setCurrentWidget(playerListPage);
 }
 
