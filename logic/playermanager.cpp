@@ -6,8 +6,8 @@
 PlayerManager::PlayerManager(const QString &csvPath)
     : m_csvPath(csvPath)
 {
-    // Show exactly where it's looking
-    qDebug() << "🔍 PlayerManager using CSV path:" << m_csvPath;
+    
+    qDebug() << "PlayerManager using CSV path:" << m_csvPath;
 }
 
 bool PlayerManager::addPlayer(const QString &name, int age, const QString &team,
@@ -21,10 +21,10 @@ bool PlayerManager::addPlayer(const QString &name, int age, const QString &team,
         out << name << "," << age << "," << team << ","
             << matches << "," << runs << "," << wickets << "\n";
         file.close();
-        qDebug() << "✅ Player added successfully.";
+        qDebug() << " Player added successfully.";
         return true;
     } else {
-        qDebug() << "❌ File open failed:" << file.errorString();
+        qDebug() << " File open failed:" << file.errorString();
     }
     return false;
 }
@@ -33,7 +33,7 @@ QList<QStringList> PlayerManager::getAllPlayers()
 {
     QList<QStringList> players;
 
-    qDebug() << "📂 Reading players from:" << m_csvPath;
+    qDebug() << " Reading players from:" << m_csvPath;
 
     QFile file(m_csvPath);
     if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
@@ -46,9 +46,9 @@ QList<QStringList> PlayerManager::getAllPlayers()
             }
         }
         file.close();
-        qDebug() << "✅ Finished reading players.";
+        qDebug() << " Finished reading players.";
     } else {
-        qDebug() << "❌ File read failed:" << file.errorString();
+        qDebug() << " File read failed:" << file.errorString();
     }
 
     return players;
