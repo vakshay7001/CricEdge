@@ -11,7 +11,7 @@ HomePage::HomePage(QWidget *parent)
     QIcon liveIcon(":/icons/live_icon.png");
     ui->liveScoresBtn->setIcon(liveIcon);
 
-    // Optional: set icon size if needed
+    
     ui->liveScoresBtn->setIconSize(QSize(16, 16));
 }
 
@@ -31,7 +31,7 @@ void HomePage::on_playerListBtn_clicked()
 }
 void HomePage::on_liveScoresBtn_clicked()
 {
-    emit liveScoresClicked();  // ✅ signal to MainWindow
+    emit liveScoresClicked();  
 }
 
 
