@@ -1,0 +1,13 @@
+debug/HomePage.o
+debug/addplayerpage.o
+debug/livescorespage.o
+debug/playermanager.o
+debug/main.o
+debug/mainwindow.o
+debug/playerlistpage.o
+debug/qrc_resources.o
+debug/moc_HomePage.o
+debug/moc_addplayerpage.o
+debug/moc_livescorespage.o
+debug/moc_mainwindow.o
+debug/moc_playerlistpage.o

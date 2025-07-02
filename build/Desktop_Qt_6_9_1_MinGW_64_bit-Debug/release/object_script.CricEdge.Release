@@ -1,0 +1,13 @@
+release/HomePage.o
+release/addplayerpage.o
+release/livescorespage.o
+release/playermanager.o
+release/main.o
+release/mainwindow.o
+release/playerlistpage.o
+release/qrc_resources.o
+release/moc_HomePage.o
+release/moc_addplayerpage.o
+release/moc_livescorespage.o
+release/moc_mainwindow.o
+release/moc_playerlistpage.o

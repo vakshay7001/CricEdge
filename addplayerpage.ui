@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AddPlayerPage</class>
+ <widget class="QWidget" name="AddPlayerPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="mainLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QFrame" name="backgroundFrame">
+     <property name="styleSheet">
+      <string notr="true">
+QFrame#backgroundFrame {
+    background-image: url(:/resources/222.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #000;
+}
+      </string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Shape::StyledPanel</enum>
+     </property>
+     <layout class="QVBoxLayout" name="backgroundLayout">
+      <property name="leftMargin">
+       <number>20</number>
+      </property>
+      <property name="topMargin">
+       <number>20</number>
+      </property>
+      <property name="rightMargin">
+       <number>20</number>
+      </property>
+      <property name="bottomMargin">
+       <number>20</number>
+      </property>
+      <item alignment="Qt::AlignmentFlag::AlignRight">
+       <widget class="QPushButton" name="homeBtn">
+        <property name="styleSheet">
+         <string notr="true">
+QPushButton {
+    border: 2px solid gold;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 150);
+    color: gold;
+    padding: 8px 16px;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background-color: gold;
+    color: black;
+}
+         </string>
+        </property>
+        <property name="text">
+         <string>🏠 Home</string>
+        </property>
+       </widget>
+      </item>
+      <item alignment="Qt::AlignmentFlag::AlignHCenter">
+       <widget class="QLabel" name="titleLabel">
+        <property name="styleSheet">
+         <string notr="true">
+QLabel {
+    color: gold;
+    font-weight: bold;
+    font-size: 32px;
+}
+         </string>
+        </property>
+        <property name="text">
+         <string>🏏 Add New Player</string>
+        </property>
+       </widget>
+      </item>
+      <item alignment="Qt::AlignmentFlag::AlignHCenter">
+       <widget class="QWidget" name="formContainer" native="true">
+        <layout class="QFormLayout" name="formLayout">
+         <property name="verticalSpacing">
+          <number>15</number>
+         </property>
+         <property name="leftMargin">
+          <number>200</number>
+         </property>
+         <property name="rightMargin">
+          <number>200</number>
+         </property>
+         <item row="0" column="0">
+          <widget class="QLabel" name="playerNameLabel">
+           <property name="styleSheet">
+            <string notr="true">
+QLabel { color: white; font-size: 16px; font-weight: bold; }
+            </string>
+           </property>
+           <property name="text">
+            <string>Player Name:</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop</set>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="playerNameLineEdit">
+           <property name="styleSheet">
+            <string notr="true">
+QLineEdit {
+    background-color: rgba(0, 0, 0, 150);
+    border: 2px solid gold;
+    border-radius: 8px;
+    color: white;
+    padding: 5px;
+}
+            </string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="ageLabel">
+           <property name="styleSheet">
+            <string notr="true">
+QLabel { color: white; font-size: 16px; font-weight: bold; }
+            </string>
+           </property>
+           <property name="text">
+            <string>Age:</string>
+           </property>
+           <property name="margin">
+            <number>-1</number>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QSpinBox" name="ageSpinBox">
+           <property name="styleSheet">
+            <string notr="true">
+QSpinBox {
+    background-color: rgba(0, 0, 0, 150);
+    border: 2px solid gold;
+    border-radius: 8px;
+    color: white;
+    padding: 5px;
+}
+            </string>
+           </property>
+           <property name="maximum">
+            <number>120</number>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="teamLabel">
+           <property name="styleSheet">
+            <string notr="true">
+QLabel { color: white; font-size: 16px; font-weight: bold; }
+            </string>
+           </property>
+           <property name="text">
+            <string>Team:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QComboBox" name="teamComboBox">
+           <property name="styleSheet">
+            <string notr="true">
+QComboBox {
+    background-color: rgba(0, 0, 0, 150);
+    border: 2px solid gold;
+    border-radius: 8px;
+    color: white;
+    padding: 5px;
+}
+            </string>
+           </property>
+           <item>
+            <property name="text">
+             <string>India</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Australia</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>South Africa</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>New Zealand</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>England</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Pakistan</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Bangladesh</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>West Indies</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Afghanistan</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Zimbabwe</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="matchesLabel">
+           <property name="styleSheet">
+            <string notr="true">
+QLabel { color: white; font-size: 16px; font-weight: bold; }
+            </string>
+           </property>
+           <property name="text">
+            <string>Matches:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QSpinBox" name="matchesSpinBox">
+           <property name="styleSheet">
+            <string notr="true">
+QSpinBox { background-color: rgba(0, 0, 0, 150); border: 2px solid gold; border-radius: 8px; color: white; padding: 5px; }
+            </string>
+           </property>
+           <property name="maximum">
+            <number>1000</number>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="runsLabel">
+           <property name="styleSheet">
+            <string notr="true">
+QLabel { color: white; font-size: 16px; font-weight: bold; }
+            </string>
+           </property>
+           <property name="text">
+            <string>Runs:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QSpinBox" name="runsSpinBox">
+           <property name="styleSheet">
+            <string notr="true">
+QSpinBox { background-color: rgba(0, 0, 0, 150); border: 2px solid gold; border-radius: 8px; color: white; padding: 5px; }
+            </string>
+           </property>
+           <property name="maximum">
+            <number>50000</number>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="wicketsLabel">
+           <property name="styleSheet">
+            <string notr="true">
+QLabel { color: white; font-size: 16px; font-weight: bold; }
+            </string>
+           </property>
+           <property name="text">
+            <string>Wickets:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="1">
+          <widget class="QSpinBox" name="wicketsSpinBox">
+           <property name="styleSheet">
+            <string notr="true">
+QSpinBox { background-color: rgba(0, 0, 0, 150); border: 2px solid gold; border-radius: 8px; color: white; padding: 5px; }
+            </string>
+           </property>
+           <property name="maximum">
+            <number>1000</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item alignment="Qt::AlignmentFlag::AlignHCenter">
+       <widget class="QPushButton" name="submitBtn">
+        <property name="styleSheet">
+         <string notr="true">
+QPushButton {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 gold, stop:1 #ffcc00);
+    border: 2px solid gold;
+    border-radius: 12px;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 24px;
+}
+QPushButton:hover {
+    background-color: gold;
+    color: #111;
+}
+         </string>
+        </property>
+        <property name="text">
+         <string>Add Player</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
