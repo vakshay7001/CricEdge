@@ -9,11 +9,11 @@ LiveScoresPage::LiveScoresPage(QWidget *parent)
 {
     ui->setupUi(this);
 
-    // Connect "Open Cricbuzz" button
+
     connect(ui->openCricbuzzBtn, &QPushButton::clicked,
             this, &LiveScoresPage::onOpenCricbuzzClicked);
 
-    // Connect "Home" button
+    
     connect(ui->homeBtn, &QPushButton::clicked,
             this, &LiveScoresPage::onHomeClicked);
 }
