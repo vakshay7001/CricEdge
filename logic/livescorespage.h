@@ -26,4 +26,4 @@ private:
     Ui::LiveScoresPage *ui;
 };
 
-#endif // LIVESCORESPAGE_H
+#endif 
