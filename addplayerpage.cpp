@@ -12,24 +12,24 @@ AddPlayerPage::AddPlayerPage(QWidget *parent)
 {
     ui->setupUi(this);
 
-    // Connect buttons
+            
     connect(ui->submitBtn, &QPushButton::clicked,
             this, &AddPlayerPage::onSubmitClicked);
 
     connect(ui->homeBtn, &QPushButton::clicked,
             this, &AddPlayerPage::onHomeClicked);
 
-    // Populate team combo box
+    
     ui->teamComboBox->addItems({
         "India", "South Africa", "Australia", "New Zealand",
         "Pakistan", "Zimbabwe", "England", "Bangladesh",
         "West Indies", "Afghanistan"
     });
 
-    // Adjust spin boxes max values
+    
     ui->ageSpinBox->setMaximum(120);
     ui->matchesSpinBox->setMaximum(1000);
-    ui->runsSpinBox->setMaximum(50000);
+    ui->runsSpinBox->setMaximum(35000);
     ui->wicketsSpinBox->setMaximum(1000);
 }
 
